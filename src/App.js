@@ -6,7 +6,7 @@ import Picture4 from './assets/image-4.png';
 import Picture5 from './assets/image-5.png';
 import './styles/App.css';
 
-const cards1 = [
+const cards = [
   {
     imageURL: Picture1,
     data: 'Sep 26, 2021',
@@ -14,9 +14,7 @@ const cards1 = [
     buttonText: 'Read Full Article',
     size: 'large',
     onClick: () => console.log('Даурен мне пожалуйста 100 баллов, как обычно :)')
-  }
-];
-const cards2 = [
+  },
   {
     imageURL: Picture2,
     data: 'Sep 26, 2021',
@@ -24,9 +22,7 @@ const cards2 = [
     buttonText: 'Read Full Article',
     size: 'small',
     onClick: () => console.log('Даурен мне пожалуйста 100 баллов, как обычно :)')
-  }
-];
-const cards3 = [
+  },
   {
     imageURL: Picture3,
     data: 'Sep 26, 2021',
@@ -34,9 +30,7 @@ const cards3 = [
     buttonText: 'Read Full Article',
     size: 'small',
     onClick: () => console.log('Даурен мне пожалуйста 100 баллов, как обычно :)')
-  }
-];
-const cards4 = [
+  },
   {
     imageURL: Picture4,
     data: 'Sep 26, 2021',
@@ -44,9 +38,7 @@ const cards4 = [
     buttonText: 'Read Full Article',
     size: 'small',
     onClick: () => console.log('Даурен мне пожалуйста 100 баллов, как обычно :)')
-  }
-];
-const cards5 = [
+  },
   {
     imageURL: Picture5,
     data: 'Sep 26, 2021',
@@ -61,40 +53,30 @@ function App() {
     <div className='app'>
       <div className='app__col-4'>
         <div className='app__item-4'>
-          {cards1.map((card) => {
-            return <Card {...card} />;
-          })}
+          <Card {...cards[0]} />
         </div>
       </div>
 
       <div className='app__col-8'>
-          <div className='app__col-6'>
-            <div className='app__item-6'>
-              {cards2.map((card) => {
-                return <Card {...card} />;
-              })}
-            </div>
+        <div className='app__col-6'>
+          <div className='app__item-6'>
+            <Card {...cards[1]} />
           </div>
-          <div className='app__col-6'>
-            <div className='app__item-6'>
-              {cards3.map((card) => {
-                return <Card {...card} />;
-              })}
-            </div>
+        </div>
+        <div className='app__col-6'>
+          <div className='app__item-6'>
+            <Card {...cards[2]} />
           </div>
-          <div className='app__col-6'>
-            <div className='app__item-6'>
-              {cards4.map((card) => {
-                return <Card {...card} />;
-              })}
-            </div>
+        </div>
+        <div className='app__col-6'>
+          <div className='app__item-6'>
+            <Card {...cards[3]} />
           </div>
-          <div className='app__col-6'>
-            <div className='app__item-6'>
-              {cards5.map((card) => {
-                return <Card {...card} />;
-              })}
-            </div>
+        </div>
+        <div className='app__col-6'>
+          <div className='app__item-6'>
+            <Card {...cards[4]} />
+          </div>
         </div>
       </div>
     </div>
