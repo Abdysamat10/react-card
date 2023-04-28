@@ -47,51 +47,44 @@ body {
     transform: rotate(360deg);
   }
 }
-
 .app {
-  display: flex;
   max-width: 1200px;
   height: 100%;
   margin: 0 auto;
-  gap: 0 40px;
 }
-.app__col-4 {
-  width: 40%;
+.row {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 40px;
 }
-.app__item-4 .card__style{
+.container:nth-child(1) {
+  grid-row-start: 3;
+  grid-row-end: 1;
+}
+.container:nth-child(1) .card__style {
   position: relative;
   padding: 30px;
   height: 59.6%;
 }
-.app__item-4 .card__style .card__btn{
-  position: absolute;
-  bottom: 27px;
-}
-.app__item-4 .card__title {
+.container:nth-child(1) .card__title {
   font-size: 28px;
   padding-top: 10px;
   padding-right: 10%;
   line-height: 40px;
 }
-.app__col-8 {
-  width: 60%;
-  display: flex;
-  flex-wrap: wrap;  
-  margin: -20px;  
+.container:nth-child(1) .card__style .card__btn{
+  position: absolute;
+  bottom: 27px;
 }
-.app__col-6 {
-  width: 50%;
-  padding: 20px;
-}
-.app__col-8 .card__title {
+.container .card__title {
   padding-top: 10px;
 }
-.app__col-8 .card__style{
+.container .card__style{
   position: relative;
   padding: 12px 25px;
   height: 59.6%;
 }
-.app__col-8 .card__style .card__btn{
+.container .card__style .card__btn{
   position: absolute;
   bottom: 13px;
 }

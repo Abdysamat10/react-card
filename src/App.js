@@ -51,33 +51,8 @@ const cards = [
 function App() {
   return (
     <div className='app'>
-      <div className='app__col-4'>
-        <div className='app__item-4'>
-          <Card {...cards[0]} />
-        </div>
-      </div>
-
-      <div className='app__col-8'>
-        <div className='app__col-6'>
-          <div className='app__item-6'>
-            <Card {...cards[1]} />
-          </div>
-        </div>
-        <div className='app__col-6'>
-          <div className='app__item-6'>
-            <Card {...cards[2]} />
-          </div>
-        </div>
-        <div className='app__col-6'>
-          <div className='app__item-6'>
-            <Card {...cards[3]} />
-          </div>
-        </div>
-        <div className='app__col-6'>
-          <div className='app__item-6'>
-            <Card {...cards[4]} />
-          </div>
-        </div>
+      <div className='row'>
+        {cards.map(card => <Card {...card}/>)}
       </div>
     </div>
   );
